@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bs": "browser-sync start --config bs-config.js"
+    "bs": "browser-sync start --config bs-config.js",
+    "start": "browser-sync start --config bs-config.js",
+    "minihtml": "htmlminify index.html -o ./dist/index.html",
+    "minicss": "cleancss -o ./style/style.min.css ./style/style.css",
+    "scss": "node-sass ./style/test.scss ./style/test.css",
+    "delete": "del-cli ./dist",
+    "build": "npm run delete && cpx ./style/*.css dist/style -C && cpx ./script/*.js dist/script -C && npm run minicss"
   },
   "repository": {
     "type": "git",
@@ -19,7 +25,12 @@
   "devDependencies": {
     "@types/jquery": "^3.3.0",
     "browser-sync": "^2.23.6",
-    "replace-in-file": "^3.1.1"
+    "replace-in-file": "^3.1.1",
+    "clean-css-cli": "^4.1.10",
+    "cpx": "^1.5.0",
+    "del-cli": "^1.1.0",
+    "html-minify": "^0.3.2",
+    "node-sass": "^4.5.3"
   },
   "dependencies": {
     "jquery": "^3.3.1"
