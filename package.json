@@ -1,0 +1,26 @@
+{
+  "name": "npmscriptplay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bs": "browser-sync start --config bs-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devcronberg/npmscriptplay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devcronberg/npmscriptplay/issues"
+  },
+  "homepage": "https://github.com/devcronberg/npmscriptplay#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.3.0",
+    "browser-sync": "^2.23.6"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
